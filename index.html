@@ -10,10 +10,38 @@
   </head>
 
   <body>
-  
-    <form name="myForm" action="handler.php" method="POST">
-          
-    </form>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Gregory-Leibniz series</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <center>
+          <h1>Please enter the amount of iteration digits.</h1>
+          </center>
+          <form name="imgoingcrazy" action="handler.php" method="POST">
+            <center>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" name="digits">
+                <label class="mdl-textfield__label" for="sample4">Enter Number...</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+            <br>
+            <!-- Raised button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">
+              Submit
+            </button>
+            </center>
+          </form>
+          </center>
+        </div>
+      </main>
+    </div>
 
   </body>
 </html>
